@@ -15,13 +15,13 @@ module.exports = {
         })
         .then(function (response) {
             if (response.data.cod && response.data.message) {
-                alert('masuk error data');
+                //alert('masuk error data');
                 throw new Error(response.data.message);
             } else {
                 return response.data.main.temp;
             }
         },function (error) {
-            alert('masuk catch function');
+            //alert('masuk catch function');
             throw new Error(error);
         });
     }
